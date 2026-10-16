@@ -112,7 +112,7 @@
     .layers figcaption { margin-top: 16px; font-size: .95rem; color: var(--muted); }
     @keyframes layer-in { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
 
-    /* ---------- Tecnologías y eventos ---------- */
+    /* ---------- Conocimientos y habilidades ---------- */
     .technologies { background: var(--surface); }
     .technologies h2, .events h2 { margin-bottom: 28px; }
     .events { background: var(--surface); }
@@ -234,5 +234,14 @@
       .layer { animation: none; }
       .btn { transition: none; }
       .stack__item::before, .timeline__item h3 a { transition: none; }
+    }
+
+    .hero__image {
+      flex: 0 0 auto; width: clamp(200px, 28vw, 320px); aspect-ratio: 1 / 1;
+      border: 3px solid var(--ink); border-radius: 50%; overflow: hidden;
+    }
+    .hero__image img {
+      display: block; width: 100%; height: 100%;
+      object-fit: cover; object-position: center top;
     }
   
