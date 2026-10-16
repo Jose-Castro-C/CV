@@ -113,20 +113,30 @@
     @keyframes layer-in { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
 
     /* ---------- Sobre mí ---------- */
-    .about { background: var(--surface); }
-    .about .wrap { display: flex; flex-wrap: wrap; gap: 56px; }
-    .about__text { flex: 1 1 460px; min-width: 0; }
-    .about__text h2 { margin-bottom: 28px; }
-    .about__text p { max-width: 60ch; color: var(--text); }
-    .about__text p + p { margin-top: 18px; }
-    .method { flex: 1 1 400px; min-width: 0; }
-    .method h3 { font-size: 1.5rem; margin-bottom: 8px; }
+    .technologies { background: var(--surface); }
+    .technologies h2, .events h2 { margin-bottom: 28px; }
+    .events { background: var(--surface); }
+    .events .lead { color: #3A4A5F; margin-bottom: 32px; }
 
-    .facts { margin: 0; padding: 0; list-style: none; }
-    .facts li { padding-block: 18px; border-top: 1px solid var(--line); }
-    .facts li:first-child { border-top: 2px solid var(--ink); }
-    .facts strong { display: block; font-weight: 600; }
-    .facts span { color: #3A4A5F; }
+    .carousel { max-width: 760px; }
+    .carousel__viewport { overflow: visible; }
+    .carousel__track { display: grid; gap: 16px; }
+    .carousel__slide {
+      min-width: 0; padding: 28px; border: 1px solid var(--line);
+      border-radius: 14px; background: #F3F6F9;
+    }
+    .carousel__slide h3 { font-size: 1.5rem; margin-bottom: 16px; }
+    .carousel__slide p { max-width: 60ch; color: var(--text); }
+    .carousel__items { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .carousel__items li { padding: 8px 14px; border-radius: 999px; background: var(--accent-tint); font-weight: 500; }
+    .carousel__controls { display: none; }
+    .carousel.is-ready .carousel__viewport { overflow: hidden; }
+    .carousel.is-ready .carousel__track { display: flex; gap: 0; transition: transform .3s ease; }
+    .carousel.is-ready .carousel__slide { flex: 0 0 100%; }
+    .carousel.is-ready .carousel__controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 20px; }
+    .carousel__controls .btn { cursor: pointer; }
+    .carousel__controls .btn:disabled { cursor: not-allowed; opacity: .5; }
+    .carousel__status { color: var(--muted); font-size: .95rem; }
 
     /* ---------- Soluciones ---------- */
     .works h2 { margin-bottom: 16px; }
@@ -190,5 +200,6 @@
       html { scroll-behavior: auto; }
       .layer { animation: none; }
       .btn { transition: none; }
+      .carousel.is-ready .carousel__track { transition: none; }
     }
   
