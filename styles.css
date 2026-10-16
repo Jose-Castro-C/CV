@@ -149,7 +149,6 @@
       content: ""; position: absolute; top: calc((1.25em - 10px) / 2); left: 0;
       width: 10px; height: 10px; border-radius: 50%; background: var(--accent);
     }
-    .stack__item--ai .stack__num { color: var(--accent); }
 
     .timeline { margin: 40px 0 0; padding: 0; list-style: none; position: relative; max-width: 760px; }
     .timeline::before {
